@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One page assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Arabian Horses</h1>
+        <p>Click on an image to view in full screen</p>
+    </header>
+
+    <section class="gallery">
+        <div class="image-container">
+            <img src="testhorses1.jpg" alt="testhorses1" class="gallery-img" onclick="openLightbox(); currentSlide(1)">
+        </div>
+        <div class="image-container">
+            <img src="testhorses2.jpg" alt="testhorses2" class="gallery-img" onclick="openLightbox(); currentSlide(2)">
+        </div>
+        <div class="image-container">
+            <img src="testhorses3.jpg" alt="testhorses3" class="gallery-img" onclick="openLightbox(); currentSlide(3)">
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <div class="slides">
+                <img src="testhorses1.jpg" alt="Image 1">
+            </div>
+            <div class="slides">
+                <img src="testhorses2.jpg" alt="Image 2">
+            </div>
+            <div class="slides">
+                <img src="testhorses3.jpg" alt="Image 3">
+            </div>
+        </div>
+        <!-- Navigation Controls -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
